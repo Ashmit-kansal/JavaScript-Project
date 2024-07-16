@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <link rel='stylesheet' href='styles.css'>
+  <title>Telephone Number Validator</title>
+</head>
+
+<body>
+  <main>
+    <h1>Telephone Number Validator</h1>
+    <div id='phone'>
+      <div id='camera'></div>
+      <div id='display'>
+        <label id='input-desc' for='user-input'> Enter a Phone Number:</label>
+        <input maxlength="20" id='user-input' type='text'>
+        <div class='hidden' id='results-div'>
+          
+        </div>
+      </div>
+      <div id='phone-footer'>
+        <button class='btn' id='check-btn'>Check</button>
+        <button class='btn' id='clear-btn'>Clear</button>
+      </div>
+
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
