@@ -29,7 +29,7 @@ check.addEventListener('click',()=>{
 })
 input.addEventListener('keydown', e => {
   if (e.key === 'Enter') {
-    checkValidNumber(input.value);
+    isValid(input.value);
     input.value = '';
   }
 });
