@@ -37,4 +37,3 @@ clear.addEventListener('click', () => {
   input.value = '';
   result.textContent='';
 });
-
