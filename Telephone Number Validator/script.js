@@ -3,28 +3,38 @@ const check=document.getElementById('check-btn');
 const clear=document.getElementById('clear-btn');
 const result=document.getElementById('results-div');
 
-const isValid=()=>{
-  if(input.value===""){
+const isValid=(inputV)=>{
+  if(inputV===""){
     alert("Please provide a phone number");
     return;
   }
-  result.classList.remove('hidden');
+
   const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
-if(input.value.match(phoneRegex)){
-  result.innerHTML=`
-  <p class='results-text'>Valid US number: ${input.value}</p>
-  `
-  input.value='';
+
+  const pTag=document.createElement('p');
+  pTag.className='results.text';
+  inputV.match(phoneRegex)?(pTag.style.color='green'):(pTag.style.color='red');
+
+  
+if(inputV.match(phoneRegex)){
+  pTag.textContent=`Valid US number: ${input.value}`
 }else{
-  result.innerHTML=`
-  <p class='results-text'>Invalid US number: ${input.value}</p>
-  `
-  input.value='';
+  pTag.textContent=`Invalid US number: ${input.value}`
 }
+result.appendChild(pTag);
 }
-check.addEventListener('click',isValid)
+check.addEventListener('click',()=>{
+  isValid(input.value);
+  input.value = '';
+})
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    checkValidNumber(input.value);
+    input.value = '';
+  }
+});
 clear.addEventListener('click', () => {
   input.value = '';
-  result.classList.add('hidden');
-  result.innerHTML = '';
+  result.textContent='';
 });
+
