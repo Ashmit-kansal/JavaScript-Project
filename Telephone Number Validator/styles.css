@@ -51,7 +51,6 @@ h1{
   text-align:center;
 }
 #results-div{
-  display: none;
   overflow:auto;
   width:100%;
   height:80%;
