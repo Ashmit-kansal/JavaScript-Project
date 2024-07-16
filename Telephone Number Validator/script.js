@@ -12,7 +12,7 @@ const isValid=(inputV)=>{
   const phoneRegex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s-]?\d{3}[\s-]?\d{4}$/;
 
   const pTag=document.createElement('p');
-  pTag.className='results.text';
+  pTag.className='results-text';
   inputV.match(phoneRegex)?(pTag.style.color='green'):(pTag.style.color='red');
 
   
