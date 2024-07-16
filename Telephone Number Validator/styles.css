@@ -61,10 +61,9 @@ h1{
   font-size:1.6rem;
   padding:5px;
   margin: 10px 0;
+  color:green;
 }
-.hidden{
-  display:none;
-}
+
 #phone-footer{
   width:80%;
   margin-top:10px;
